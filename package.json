@@ -1,0 +1,60 @@
+{
+  "name": "cow-nutrition",
+  "version": "1.0.0",
+  "main": "./main.js",
+  "private": true,
+  "expressPort": 8080,
+  "basePath": "./dist",
+  "scripts": {
+    "cli": "node cli.js",
+    "start": "electron .",
+    "dev": "electron --debug .",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode production -w",
+    "package:win": "electron-packager . cow-nutrition --overwrite --asar --platform=win32 --arch=x64 --app-version=2.1.0 --prune --out=desktop/win --ignore=src --icon=./dist/public/img/icon.ico",
+    "package:mac": "electron-packager . cow-nutrition --overwrite --asar --platform=darwin --arch=x64 --app-version=2.1.0 --prune --out=desktop/mac --ignore=src  --icon=./dist/public/img/icon.ico",
+    "package:linux": "electron-packager . cow-nutrition --overwrite --asar --platform=linux --arch=x64 --app-version=2.1.0 --prune --out=desktop/linux --ignore=src  --icon=./dist/public/img/icon.ico"
+  },
+  "author": "github: TheWitcher1991 <alikzoy@gmail.com>",
+  "license": "GNU GPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheWitcher1991/cow-nutrition"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-transform-for-of": "^7.27.1",
+    "@babel/plugin-transform-runtime": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/runtime": "^7.28.4",
+    "@electron/asar": "^4.0.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "devtron": "^1.4.0",
+    "electron": "^39.2.4",
+    "electron-packager": "^17.1.2",
+    "eslint": "^9.39.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "idempotent-babel-polyfill": "^7.4.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "prettier": "^3.7.3",
+    "prune": "^0.0.2",
+    "sass": "^1.94.2",
+    "sass-loader": "^16.0.6",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "devEngines": {
+    "node": ">= 18.x.x",
+    "npm": ">= 9.x.x"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
+}
