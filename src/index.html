@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" theme="dark">
+
+<head>
+    <title>cow-nutrition </title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="author" content="ashot.svazyan@yandex.ru">
+
+    <link rel="shortcut icon" href="../dist/img/icon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../dist/libs/FontAwesome/css/all.css">
+    <link rel="stylesheet" href="../dist/font/CirceRounded/CirceRounded.css">
+    <link rel="stylesheet" href="../dist/static/style.bundle.css">
+</head>
+
+<body>
+
+    <main id="wrapper">
+        <div class="window__button" style="-webkit-app-region: drag">
+            <div style="-webkit-app-region: no-drag" id="minimize-button" class="minimize-button top-bth-f"><i
+                    class="fa-solid fa-window-minimize"></i></div>
+            <div style="-webkit-app-region: no-drag" id="close-button" class="close-button top-bth-f"><i
+                    class="fa-solid fa-xmark"></i></div>
+        </div>
+
+        <div class="content">
+            <img src="../dist/img/cow.png" width="200" />
+
+            <div class="labels">
+                <label class="window__label">
+                    <span>Диаметр пишевода (см):</span>
+                    <input id="D" type="number" name="D" />
+                </label>
+
+                <label class="window__label">
+                    <span>Цена за 1 кг сена (руб):</span>
+                    <input id="P" type="number" name="P" />
+                </label>
+
+                <label class="window__label">
+                    <span>Время коровы на посеке (ч):</span>
+                    <input id="H" type="number" name="H" />
+                </label>
+            </div>
+
+            <div class="form__bth form__bth-right">
+                <button type="button" class="form__cancel reset__cow">Сброс</button>
+                <button type="button" class="form__save apply__cow">Посчитать</button>
+            </div>
+
+            <div class="output">
+                <div class="output-title">Вывод:</div>
+
+                <div class="output-grid">
+                    <div class="output-item"><i class="fa-duotone fa-light fa-weight-scale"></i> Вес сена на 1 см/кв:
+                        <span class="hay">0,75 г</span>
+                    </div>
+                    <div class="output-item"><i class="fa-duotone fa-solid fa-cow"></i> Радиус пищевода: <span
+                            class="R">5
+                            см</span></div>
+                    <div class="output-item"><i class="fa-duotone fa-solid fa-text-size"></i> Площадь пищевода: <span
+                            class="S">15
+                            см</span></div>
+                    <div class="output-item"><i class="fa-duotone fa-solid fa-avocado"></i> Сеъедает за 1 час:<span
+                            class="hayForHour"> 4,5
+                            кг/ч</span></div>
+                    <div class="output-item"><i class="fa-duotone fa-solid fa-dumbbell"></i> Итоговый вес сена: <span
+                            class="hayWeight">6
+                            кг</span></div>
+                    <div class="output-item"><i class="fa-duotone fa-solid fa-ruble-sign"></i> Итоговые расходы:
+                        <span class="hayPrice">100 руб</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../dist/static/script.bundle.js"></script>
+
+</body>
+
+</html>

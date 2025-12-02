@@ -13,11 +13,11 @@ const target = process.env.NODE_ENV === 'production' ? 'browserslist' : 'web'
 
 module.exports = {
     entry: [
-        // `${PATHS.src}/api.js`,
+        `${PATHS.src}/api.js`,
         `${PATHS.src}/styles/index.scss`
     ],
     output: {
-        path: path.join(__dirname, './dist/public/static'),
+        path: path.join(__dirname, './dist/static'),
         filename: 'script.bundle.js'
     },
     devtool: 'source-map',
