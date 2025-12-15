@@ -26,15 +26,15 @@
 
 	function createWindow() {
 		const windowOptions = {
-			minWidth: 960,
-			minHeight: 665,
+			minWidth: 560,
+			minHeight: 705,
 			center: true,
 			title: pjson.name,
 			resizable: true,
 			frame: false,
 			hasShadow: false,
 			titleBarStyle: 'hidden',
-			icon: path.join(__dirname, '/dist/public/img/icon.ico'),
+			icon: path.join(__dirname, '/dist/img/icon.ico'),
 			webPreferences: {
 				nodeIntegration: true,
 				nodeIntegrationInWorker: true,
@@ -47,7 +47,7 @@
 		}
 
 		if (process.platform === 'linux') {
-			windowOptions.icon = path.join(__dirname, '/dist/public/img/icon.ico')
+			windowOptions.icon = path.join(__dirname, '/dist/img/icon.ico')
 		}
 
 		mainWindow = new BrowserWindow(windowOptions)
